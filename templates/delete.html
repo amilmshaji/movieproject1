@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block body %}
+<form method="POST">
+  {% csrf_token %}
+  <div class="col-md-12 form-group alert alert-warning">
+  ARe you want to Delete This movie?
+  <input type="submit">
+  </div>
+
+</form>
+{% endblock %}

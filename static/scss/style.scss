@@ -1,0 +1,90 @@
+
+
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+$font-family-sans-serif-2: 'Poppins', sans-serif;
+$font-family-serif: 'Source Serif Pro', serif;
+
+
+
+body {
+	font-family: $font-family-sans-serif;
+	background-color: #fff;
+	color: #000;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: $font-family-sans-serif-2;
+}
+a {
+	transition: .3s all ease;
+	&, &:hover {
+		text-decoration: none!important;
+	}
+}
+.content {
+	padding: 7rem 0;
+}
+h2 {
+	font-size: 3.5rem;
+	font-weight: 700;
+}
+h3 {
+	font-size: 2rem;
+	font-weight: 700;
+}
+.form-control {
+	border: none;
+	border-bottom: 1px solid lighten(#ccc, 5%);
+	padding-left: 0;
+	padding-right: 0;
+	border-radius: 0;
+	&:active, &:focus {
+		outline: none;
+		box-shadow: none;
+		border-color: #000;
+	}
+}
+.btn, .form-control {
+	height: 55px;
+}
+form.border-right {
+	padding-right: 6rem!important;
+	@include media-breakpoint-down(md) {
+		padding-right: 0!important;
+		border-right: none!important;
+	}
+}
+
+
+label.error {
+	font-size: 12px;
+	color: red;
+}
+
+#message {
+	resize: vertical;
+}
+#form-message-warning, #form-message-success {
+	display: none;
+}
+#form-message-warning {
+	color: #B90B0B;
+}
+#form-message-success {
+	color: #55A44E;
+	font-size: 18px;
+	font-weight: bold;
+}
+.submitting {
+	float: left;
+	width: 100%;
+	padding: 10px 0;
+	display: none;
+	font-weight: bold;
+	font-size: 12px;
+	color: #000;
+}
